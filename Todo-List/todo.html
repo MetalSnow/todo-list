@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Learn JavaScript</title>
+    <link rel="stylesheet" href="main.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,500;0,700;1,300&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        font-family: roboto;
+        background: url("https://images.unsplash.com/3/doctype-hi-res.jpg?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1165&q=80");
+        background-size: cover;
+      }
+      .container {
+        width: 600px;
+        padding: 60px;
+        margin: 100px auto;
+        position: relative;
+      }
+      .title {
+        font-size: 30px;
+        font-weight: 700;
+        position: absolute;
+        width: 300px;
+        top: 0;
+        left: 26%;
+        text-align: center;
+        background-color: rgba(46, 44, 44, 0.867);
+        padding: 15px;
+        color: white;
+        border-bottom-left-radius: 30px;
+        border-top-right-radius: 30px;
+        border-top-left-radius: 6px;
+        border-bottom-right-radius: 6px;
+        cursor: default;
+        box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.3);
+      }
+      .img {
+        width: 36px;
+        height: 42px;
+        margin-right: 6px;
+        border-radius: 3px;
+      }
+      .form {
+        background-color: rgba(46, 44, 44, 0.867);
+        border-radius: 6px;
+        padding: 30px;
+        display: flex;
+        align-items: center;
+        margin-top: 50px;
+        box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.3);
+      }
+      .input {
+        padding: 12px;
+        border: 1px solid #ddd;
+        border-radius: 6px;
+        flex: 1;
+        font-family: roboto;
+        font-size: 15px;
+      }
+      .input:focus {
+        outline: none;
+      }
+      .add {
+        border: none;
+        background-color: #407db0;
+        color: rgb(255, 255, 255);
+        padding: 14px;
+        border-radius: 6px;
+        margin-left: 10px;
+        cursor: pointer;
+        font-size: 15px;
+        font-weight: 600;
+      }
+      .add:active {
+        opacity: 0.6;
+      }
+      .tasks {
+        background-color: rgba(46, 44, 44, 0.867);
+        margin-top: 20px;
+        border-radius: 6px;
+        padding: 30px;
+        box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.3);
+      }
+      .tasks .task {
+        background-color: white;
+        padding: 10px;
+        border-radius: 6px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        transition: 0.3s;
+        cursor: pointer;
+        border: 1px solid #ccc;
+      }
+      .tasks .task:not(:last-child) {
+        margin-bottom: 15px;
+      }
+      .tasks .task:hover {
+        background-color: #dddddd;
+      }
+      .tasks .task.done {
+        opacity: 0.4;
+      }
+      .tasks .task span {
+        font-weight: bold;
+        font-size: 14px;
+        background-color: black;
+        color: white;
+        padding: 5px 10px;
+        border-radius: 4px;
+        cursor: pointer;
+      }
+      .input::placeholder {
+        color: lightgray;
+      }
+      @media (max-width: 670px) {
+        .container {
+          width: 400px;
+          padding: 40px;
+        }
+        .title {
+          font-size: 25px;
+          width: 200px;
+          top: 0;
+          left: 24%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="title">Todo List</div>
+      <form class="form">
+        <img class="img" src="todo.img.png" alt="" />
+        <input type="text" class="input" placeholder="Write task " />
+        <input type="submit" id="btn" class="add" value="Add Task" />
+      </form>
+      <div class="tasks"></div>
+    </div>
+    <script src="todo.js"></script>
+  </body>
+</html>
